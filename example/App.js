@@ -5,11 +5,13 @@
  */
 
 import React, { Component } from 'react';
+
 import {
   Platform,
   StyleSheet,
   Text,
-  View
+  View,
+  NativeModules
 } from 'react-native';
 
 const instructions = Platform.select({
@@ -19,8 +21,13 @@ const instructions = Platform.select({
     'Shake or press menu button for dev menu',
 });
 
-type Props = {};
-export default class App extends Component<Props> {
+export default class App extends Component {
+  componentDidMount() {
+    setTimeout(() => {
+      NativeModules.DynamicSplash.hide();
+    }, 1000);
+  }
+
   render() {
     return (
       <View style={styles.container}>

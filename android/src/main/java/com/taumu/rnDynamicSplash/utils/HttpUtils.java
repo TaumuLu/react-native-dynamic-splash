@@ -26,7 +26,7 @@ public class HttpUtils {
                     connection.setRequestMethod("GET");
                     //获得结果码
                     int responseCode = connection.getResponseCode();
-                    if(responseCode == 200){
+                    if (responseCode == 200) {
                         //请求成功 获得返回的流
                         InputStream is = connection.getInputStream();
                         byte[] data = readStream(is);
@@ -46,6 +46,31 @@ public class HttpUtils {
             }
         }).start();
     }
+    // json data
+    // {
+    //     splashInfo: {
+    //         imageUrl: "http://***.png"
+    //     }
+    // }
+    // public static void requestSplashInfo(String getApi) {
+    //     HttpUtils.get(getApi, new HttpUtils.Callback() {
+    //         @Override
+    //         public void onResponse(String jsonString) {
+    //             try {
+    //                 JSONObject jsonObject = new JSONObject(jsonString);
+    //                 JSONObject valueObject = jsonObject.getJSONObject("splashInfo");
+    //                 String imageUrl = valueObject.getString("imageUrl");
+    //                 if (!TextUtils.isEmpty(imageUrl)) {
+    //                     Config splashConfig = new Config();
+    //                     splashConfig.setImageUrl(imageUrl);
+    //                     new DynamicSplash(activity, splashConfig);
+    //                 }
+    //             } catch (JSONException e) {
+    //                 e.printStackTrace();
+    //             }
+    //         }
+    //     });
+    // }
 
     public static byte[] readStream(InputStream input) throws IOException {
         ByteArrayOutputStream output = new ByteArrayOutputStream();

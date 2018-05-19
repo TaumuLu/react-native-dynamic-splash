@@ -10,7 +10,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class SplashScreenReactPackage implements ReactPackage {
+public class DynamicSplashReactPackage implements ReactPackage {
 
     // Deprecated RN 0.47
     public List<Class<? extends JavaScriptModule>> createJSModules() {
@@ -26,7 +26,7 @@ public class SplashScreenReactPackage implements ReactPackage {
     public List<NativeModule> createNativeModules(
             ReactApplicationContext reactContext) {
         List<NativeModule> modules = new ArrayList<>();
-        modules.add(new SplashScreenModule(reactContext));
+        modules.add(new DynamicSplashModule(reactContext));
         return modules;
     }
 }

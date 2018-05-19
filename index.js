@@ -1,2 +1,3 @@
-// import { NativeModules } from 'react-native';
-// export default NativeModules.DynamicSplash;
+const NativeModules = require('react-native')
+
+module.exports = NativeModules.DynamicSplash;
