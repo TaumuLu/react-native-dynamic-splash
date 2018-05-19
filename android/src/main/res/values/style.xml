@@ -1,0 +1,18 @@
+<resources>
+    <!--启动页退出动画-->
+    <style name="SplashScreen_SplashAnimation">
+        <item name="android:windowExitAnimation">@android:anim/fade_out</item>
+        <!--背景颜色及透明程度-->
+        <item name="android:windowBackground">@android:color/white</item>
+    </style>
+
+    <!--存在状态栏-->
+    <style name="SplashScreen_SplashTheme" parent="Theme.AppCompat.NoActionBar">
+        <!-- <item name="android:windowAnimationStyle">@style/SplashScreen_SplashAnimation</item> -->
+    </style>
+
+    <!--全屏-->
+    <style name="SplashScreen_Fullscreen" parent="SplashScreen_SplashTheme">
+        <item name="android:windowFullscreen">true</item>
+    </style>
+</resources>
