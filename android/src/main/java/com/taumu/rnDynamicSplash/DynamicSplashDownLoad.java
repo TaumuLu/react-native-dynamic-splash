@@ -18,11 +18,8 @@ public class DynamicSplashDownLoad {
     private static String sharedKeyName = "fileName";
 
     public static void setSharedValue(Activity activity, String value) {
-        //获取SharedPreferences对象
         SharedPreferences sharedPre = activity.getSharedPreferences(sharedName, Context.MODE_PRIVATE);
-        //获取Editor对象
         SharedPreferences.Editor editor = sharedPre.edit();
-        //设置参数
         editor.putString(sharedKeyName, value);
         editor.apply();
     }

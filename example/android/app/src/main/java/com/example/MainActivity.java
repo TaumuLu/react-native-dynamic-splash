@@ -20,6 +20,7 @@ public class MainActivity extends ReactActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         Config splashConfig = new Config();
+        splashConfig.setImageUrl("https://b-ssl.duitang.com/uploads/item/201601/30/20160130164234_Rv52c.jpeg");
         // splashConfig.setShow(false);
         new DynamicSplash(this, splashConfig);
         super.onCreate(savedInstanceState);
