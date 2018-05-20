@@ -20,8 +20,15 @@ public class MainActivity extends ReactActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         Config splashConfig = new Config();
-        splashConfig.setImageUrl("https://b-ssl.duitang.com/uploads/item/201601/30/20160130164234_Rv52c.jpeg");
-        // splashConfig.setShow(false);
+        splashConfig.setImageUrl("http://chuantu.biz/t6/315/1526801898x-1404793363.png");
+
+        splashConfig.setAutoHide(true);
+        // splashConfig.setAutoHideTime(2000);
+        // splashConfig.setLayoutResID(R.layout.custom_splash_dynamic);
+        // splashConfig.setThemeResId(R.style.Custom_Splash_Theme);
+        // splashConfig.setAutoDownload(false);
+        // splashConfig.setSplashSavePath("/customSplashPath/");
+        // splashConfig.setDynamicShow(false);
         new DynamicSplash(this, splashConfig);
         super.onCreate(savedInstanceState);
     }

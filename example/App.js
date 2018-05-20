@@ -22,10 +22,14 @@ const instructions = Platform.select({
 });
 
 export default class App extends Component {
+  constructor(props) {
+    super(props)
+    // NativeModules.DynamicSplash.downloadSplash();
+  }
   componentDidMount() {
-    setTimeout(() => {
-      NativeModules.DynamicSplash.hide();
-    }, 1000);
+    // setTimeout(() => {
+    //   NativeModules.DynamicSplash.hide();
+    // }, 1000);
   }
 
   render() {

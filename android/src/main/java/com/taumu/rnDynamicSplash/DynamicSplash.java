@@ -2,6 +2,7 @@ package com.taumu.rnDynamicSplash;
 
 import android.app.Activity;
 import android.app.Dialog;
+import android.os.Handler;
 import android.widget.ImageView;
 
 import java.lang.ref.WeakReference;
@@ -36,10 +37,10 @@ public class DynamicSplash {
             public void run() {
                 if (!activity.isFinishing()) {
                     mDialog = new Dialog(activity, finalConfig.getThemeResId());
-                    mDialog.setContentView(finalConfig.getLayoutResID());
+                    mDialog.setContentView(finalConfig.getLayoutResId());
                     mDialog.setCancelable(false);
                     mSplashImage = (ImageView) mDialog.findViewById(R.id.dynamicSplash_id);
-                    if (finalConfig.isShow()) {
+                    if (finalConfig.isDynamicShow()) {
                         DynamicSplashDownLoad.setDialogImage(activity, mSplashImage);
                     }
                     if (finalConfig.isAutoDownload()) {
@@ -48,10 +49,23 @@ public class DynamicSplash {
 
                     if (!mDialog.isShowing()) {
                         mDialog.show();
+                        if (finalConfig.isAutoHide()) {
+                            autoHide(activity);
+                        }
                     }
                 }
             }
         });
+    }
+
+    private void autoHide(final Activity activity) {
+        Handler handler = new Handler();
+        handler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                hide(activity);
+            }
+        }, mConfig.getAutoHideTime());
     }
 
     private Config setConfigField(Activity activity, Config config) {

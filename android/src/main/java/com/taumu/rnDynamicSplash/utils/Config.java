@@ -4,11 +4,13 @@ import com.taumu.rnDynamicSplash.R;
 
 public class Config {
     private String imageUrl = "";
-    private int themeResId = R.style.DynamicSplash_Theme;
-    private int layoutResID = R.layout.splash_dynamic;
     private String splashSavePath = "/splash/";
+    private int themeResId = R.style.DynamicSplash_Theme;
+    private int layoutResId = R.layout.splash_dynamic;
     private boolean autoDownload = true;
-    private boolean isShow = true;
+    private boolean dynamicShow = true;
+    private boolean autoHide = false;
+    private long autoHideTime = 3000;
 
     public String getImageUrl() {
         return imageUrl;
@@ -24,14 +26,6 @@ public class Config {
 
     public void setThemeResId(int themeResId) {
         this.themeResId = themeResId;
-    }
-
-    public int getLayoutResID() {
-        return layoutResID;
-    }
-
-    public void setLayoutResID(int layoutResID) {
-        this.layoutResID = layoutResID;
     }
 
     public String getSplashSavePath() {
@@ -50,11 +44,35 @@ public class Config {
         this.autoDownload = autoDownload;
     }
 
-    public boolean isShow() {
-        return isShow;
+    public boolean isAutoHide() {
+        return autoHide;
     }
 
-    public void setShow(boolean show) {
-        isShow = show;
+    public void setAutoHide(boolean autoHide) {
+        this.autoHide = autoHide;
+    }
+
+    public long getAutoHideTime() {
+        return autoHideTime;
+    }
+
+    public void setAutoHideTime(long autoHideTime) {
+        this.autoHideTime = autoHideTime;
+    }
+
+    public boolean isDynamicShow() {
+        return dynamicShow;
+    }
+
+    public void setDynamicShow(boolean dynamicShow) {
+        this.dynamicShow = dynamicShow;
+    }
+
+    public int getLayoutResId() {
+        return layoutResId;
+    }
+
+    public void setLayoutResId(int layoutResId) {
+        this.layoutResId = layoutResId;
     }
 }
