@@ -1,7 +1,7 @@
 # react-native-dynamic-splash
 React Native动态启动页(广告页)，支持Android和iOS
 
-## Installation
+## 安装
 ```
 npm install react-native-dynamic-splash --save
 ```
@@ -11,7 +11,7 @@ npm install react-native-dynamic-splash --save
 | --- | ------- |
 | ![IOS](./demo.ios.gif) | ![Android](./demo.android.gif) |
 
-## 安装
+## RN安装
 
 ### Android
 

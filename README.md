@@ -12,7 +12,7 @@ npm install react-native-dynamic-splash --save
 | --- | ------- |
 | ![IOS](./demo.ios.gif) | ![Android](./demo.android.gif) |
 
-## 安装
+## Rn installation
 
 ### Android
 

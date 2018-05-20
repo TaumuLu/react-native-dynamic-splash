@@ -20,7 +20,7 @@ public class MainActivity extends ReactActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         Config splashConfig = new Config();
-        splashConfig.setImageUrl("http://chuantu.biz/t6/315/1526801898x-1404793363.png");
+        splashConfig.setImageUrl("http://chuantu.biz/t6/315/1526808193x-1404792987.png");
 
         splashConfig.setAutoHide(true);
         // splashConfig.setAutoHideTime(2000);
