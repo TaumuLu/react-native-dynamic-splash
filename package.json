@@ -12,7 +12,8 @@
     "react-native",
     "splash",
     "advertising screen",
-    "dynamic"
+    "dynamic",
+    "download"
   ],
   "repository": {
     "type": "git",
