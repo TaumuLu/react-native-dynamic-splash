@@ -206,3 +206,4 @@ public static void getSplashImageUrl(String getApi) {
 
 ## Changelog
 - 1.0.*
+- 1.1.*
