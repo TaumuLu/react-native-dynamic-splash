@@ -75,7 +75,10 @@
 
     //  NSString *launchImageName = [[NSBundle mainBundle] pathForResource:@"LaunchImage" ofType:@"png"];
     NSString *launchImageName = [FileUtils getLaunchImageName];
-    return [UIImage imageNamed:launchImageName];
+    if(![Utils isBlankString: launchImageName]) {
+      return [UIImage imageNamed:launchImageName];
+    }
+    return [UIImage imageNamed:@"Splash"];
 }
 
 - (void)autoHide {
