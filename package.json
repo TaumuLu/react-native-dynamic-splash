@@ -1,6 +1,6 @@
 {
   "name": "react-native-dynamic-splash",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "dynamic display splash",
   "main": "index.js",
   "scripts": {

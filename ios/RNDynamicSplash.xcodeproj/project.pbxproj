@@ -1,0 +1,320 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6EADED5720C6CC1100D10395 /* HttpUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EADED5620C6CC1100D10395 /* HttpUtils.m */; };
+		6EADED5A20C6CC3900D10395 /* FileUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EADED5920C6CC3900D10395 /* FileUtils.m */; };
+		6EADED9520C7875D00D10395 /* SplashConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EADED9420C7875D00D10395 /* SplashConfig.m */; };
+		6EF65A2120B17BCA0076D1FA /* RNDynamicSplash.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EF65A2020B17BCA0076D1FA /* RNDynamicSplash.m */; };
+		6EF65A2220B17BCA0076D1FA /* RNDynamicSplash.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6EF65A1F20B17BCA0076D1FA /* RNDynamicSplash.h */; };
+		6EF65A2920B17E7A0076D1FA /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EF65A2820B17E7A0076D1FA /* Utils.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		6EF65A1A20B17BCA0076D1FA /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+				6EF65A2220B17BCA0076D1FA /* RNDynamicSplash.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		6EADED5520C6CC1100D10395 /* HttpUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HttpUtils.h; sourceTree = "<group>"; };
+		6EADED5620C6CC1100D10395 /* HttpUtils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HttpUtils.m; sourceTree = "<group>"; };
+		6EADED5820C6CC3900D10395 /* FileUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FileUtils.h; sourceTree = "<group>"; };
+		6EADED5920C6CC3900D10395 /* FileUtils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FileUtils.m; sourceTree = "<group>"; };
+		6EADED9320C7875D00D10395 /* SplashConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SplashConfig.h; sourceTree = "<group>"; };
+		6EADED9420C7875D00D10395 /* SplashConfig.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SplashConfig.m; sourceTree = "<group>"; };
+		6EF65A1C20B17BCA0076D1FA /* libRNDynamicSplash.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRNDynamicSplash.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		6EF65A1F20B17BCA0076D1FA /* RNDynamicSplash.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RNDynamicSplash.h; sourceTree = "<group>"; };
+		6EF65A2020B17BCA0076D1FA /* RNDynamicSplash.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RNDynamicSplash.m; sourceTree = "<group>"; };
+		6EF65A2820B17E7A0076D1FA /* Utils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Utils.m; sourceTree = "<group>"; };
+		6EF65A2A20B17E990076D1FA /* Utils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6EF65A1920B17BCA0076D1FA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6E2717D320C0487C0044E0B5 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				6EADED9320C7875D00D10395 /* SplashConfig.h */,
+				6EADED9420C7875D00D10395 /* SplashConfig.m */,
+				6EADED5820C6CC3900D10395 /* FileUtils.h */,
+				6EADED5920C6CC3900D10395 /* FileUtils.m */,
+				6EF65A2A20B17E990076D1FA /* Utils.h */,
+				6EF65A2820B17E7A0076D1FA /* Utils.m */,
+				6EADED5520C6CC1100D10395 /* HttpUtils.h */,
+				6EADED5620C6CC1100D10395 /* HttpUtils.m */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		6EF65A1320B17BCA0076D1FA = {
+			isa = PBXGroup;
+			children = (
+				6E2717D320C0487C0044E0B5 /* Utils */,
+				6EF65A1D20B17BCA0076D1FA /* Products */,
+				6EF65A1F20B17BCA0076D1FA /* RNDynamicSplash.h */,
+				6EF65A2020B17BCA0076D1FA /* RNDynamicSplash.m */,
+			);
+			sourceTree = "<group>";
+		};
+		6EF65A1D20B17BCA0076D1FA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6EF65A1C20B17BCA0076D1FA /* libRNDynamicSplash.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6EF65A1B20B17BCA0076D1FA /* RNDynamicSplash */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6EF65A2520B17BCA0076D1FA /* Build configuration list for PBXNativeTarget "RNDynamicSplash" */;
+			buildPhases = (
+				6EF65A1820B17BCA0076D1FA /* Sources */,
+				6EF65A1920B17BCA0076D1FA /* Frameworks */,
+				6EF65A1A20B17BCA0076D1FA /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RNDynamicSplash;
+			productName = RNDynamicSplash;
+			productReference = 6EF65A1C20B17BCA0076D1FA /* libRNDynamicSplash.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6EF65A1420B17BCA0076D1FA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0930;
+				ORGANIZATIONNAME = mt;
+				TargetAttributes = {
+					6EF65A1B20B17BCA0076D1FA = {
+						CreatedOnToolsVersion = 9.3;
+					};
+				};
+			};
+			buildConfigurationList = 6EF65A1720B17BCA0076D1FA /* Build configuration list for PBXProject "RNDynamicSplash" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 6EF65A1320B17BCA0076D1FA;
+			productRefGroup = 6EF65A1D20B17BCA0076D1FA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6EF65A1B20B17BCA0076D1FA /* RNDynamicSplash */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6EF65A1820B17BCA0076D1FA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6EADED5A20C6CC3900D10395 /* FileUtils.m in Sources */,
+				6EF65A2120B17BCA0076D1FA /* RNDynamicSplash.m in Sources */,
+				6EF65A2920B17E7A0076D1FA /* Utils.m in Sources */,
+				6EADED9520C7875D00D10395 /* SplashConfig.m in Sources */,
+				6EADED5720C6CC1100D10395 /* HttpUtils.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		6EF65A2320B17BCA0076D1FA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/../example/node_modules/react-native/React";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				LIBRARY_SEARCH_PATHS = "";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		6EF65A2420B17BCA0076D1FA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/../example/node_modules/react-native/React";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				LIBRARY_SEARCH_PATHS = "";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6EF65A2620B17BCA0076D1FA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6EF65A2720B17BCA0076D1FA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6EF65A1720B17BCA0076D1FA /* Build configuration list for PBXProject "RNDynamicSplash" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6EF65A2320B17BCA0076D1FA /* Debug */,
+				6EF65A2420B17BCA0076D1FA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6EF65A2520B17BCA0076D1FA /* Build configuration list for PBXNativeTarget "RNDynamicSplash" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6EF65A2620B17BCA0076D1FA /* Debug */,
+				6EF65A2720B17BCA0076D1FA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6EF65A1420B17BCA0076D1FA /* Project object */;
+}

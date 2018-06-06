@@ -9,6 +9,8 @@
 
 #import <React/RCTBundleURLProvider.h>
 #import <React/RCTRootView.h>
+#import "RNDynamicSplash.h"
+#import "SplashConfig.h"
 
 @implementation AppDelegate
 
@@ -29,6 +31,16 @@
   rootViewController.view = rootView;
   self.window.rootViewController = rootViewController;
   [self.window makeKeyAndVisible];
+
+  SplashConfig *config = [[SplashConfig alloc] init];
+  config.imageUrl = @"http://chuantu.biz/t6/315/1526808193x-1404792987.png";
+  config.autoHide = true;
+//  config.autoHideTime = 1000;
+//  config.dynamicShow = false;
+//  config.autoDownload = false;
+  // config.splashSavePath = @"custom";
+  [[RNDynamicSplash alloc] initWithShow:rootView splashConfig:config];
+
   return YES;
 }
 

@@ -8,7 +8,7 @@ npm install react-native-dynamic-splash --save
 ```
 
 ## Demo
-| IOS | Android|
+| IOS | Android |
 | --- | ------- |
 | ![IOS](./demo.ios.gif) | ![Android](./demo.android.gif) |
 
@@ -66,6 +66,20 @@ public class MainApplication extends Application implements ReactApplication {
 }
 ```
 
+### iOS
+
+#### Installing via CocoaPods
+1. Added in Podfile file `pod 'RNDeviceInfo', :path => '../node_modules/react-native-device-info'`
+3. Then run pod install
+
+#### Manual installation
+1. In XCode, in the project navigator, right click Libraries ➜ Add Files to [your project's name]
+2. Go to node_modules ➜ react-native-dynamic-splash and add RNDynamicSplash.xcodeproj
+3. In XCode, in the project navigator, select your targets. Add libRNDynamicSplash.a to your project's Build Phases ➜ Link Binary With Libraries
+4. To fix 'RNDynamicSplash.h' file not found, you have to select your project/targets →  Build Settings → Search Paths → Header Search Paths to add:
+  - project $(SRCROOT)/../node_modules/react-native-dynamic-splash/ios recursive
+  - targets $(inherited) recursive
+
 ## Usage
 
 ### Android
@@ -95,13 +109,43 @@ public class MainActivity extends ReactActivity {
 }
 ```
 
+### iOS
+- AppDelegate.m File
+```objective-c
+...
+#import "RNDynamicSplash.h"
+#import "SplashConfig.h"
+
+@implementation AppDelegate
+
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+{
+  ...
+  [self.window makeKeyAndVisible];
+
+  SplashConfig *config = [[SplashConfig alloc] init];  // Splash configuration class
+  // config.imageUrl = @"http://custom/splash.png";
+  config.autoHide = true;
+  // config.autoHideTime = 1000;
+  // config.dynamicShow = false;
+  // config.autoDownload = false;
+  // config.splashSavePath = @"custom";
+  [[RNDynamicSplash alloc] initWithShow:rootView splashConfig:config];  // Add display splash here
+
+  return YES;
+}
+
+@end
+...
+```
+
 ### Configuration
 | type | Field | defaultValue | setter | description |
 | ---- | ----- | ------------ | ------ | ----------- |
 | String | imageUrl | "" | setImageUrl | Download picture address |
 | String | splashSavePath | /splash/ | setSplashSavePath | Save image address |
-| int | themeResId | R.style.DynamicSplash_Theme | setThemeResId | Use theme resource id |
-| int | layoutResId | R.layout.splash_dynamic | setLayoutResId | Use layout file resource id |
+| int | themeResId(Android only) | R.style.DynamicSplash_Theme | setThemeResId | Use theme resource id |
+| int | layoutResId(Android only) | R.layout.splash_dynamic | setLayoutResId | Use layout file resource id |
 | boolean | autoDownload | true | setAutoDownload | Whether to download automatically |
 | boolean | dynamicShow | true | setDynamicShow | Whether to display the downloaded picture |
 | boolean | autoHide | false | setAutoHide | Whether to automatically hide |
@@ -110,7 +154,8 @@ public class MainActivity extends ReactActivity {
 ### Other instructions
 - The first time to start displaying the default image, the second time to start displaying the downloaded image again
 - Can use their own written resource files and topics, and the same name as the default configuration, otherwise call the set method to change the configuration, reference package resource file
-- ImageUrl is not set to display the resource image in the layout file
+- Android doesn't set imageUrl to show resource image in layout file
+- ios does not set imageUrl to show picture of LaunchImage
 
 #### Provide gei request method
 Can call the request to get the address of the picture
@@ -155,6 +200,7 @@ public static void getSplashImageUrl(String getApi) {
 ## TODO
 - [x] Android version splash
 - [x] Ios version splash
+- [ ] js incoming url as image download link
 - [ ] Configuration add skip button
 - [ ] Ios rewrite using swift
 

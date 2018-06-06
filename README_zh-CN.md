@@ -7,7 +7,7 @@ npm install react-native-dynamic-splash --save
 ```
 
 ## Demo
-| IOS | Android|
+| IOS | Android |
 | --- | ------- |
 | ![IOS](./demo.ios.gif) | ![Android](./demo.android.gif) |
 
@@ -65,6 +65,21 @@ public class MainApplication extends Application implements ReactApplication {
 }
 ```
 
+### iOS
+
+#### 通过CocoaPods安装
+1. Podfile文件中添加 `pod 'RNDeviceInfo', :path => '../node_modules/react-native-device-info'`
+3. 运行 pod install
+
+#### 手动安装
+1. 在XCode中的项目导航器中，右键单击 Libraries ➜ Add Files to [your project's name]
+2. 转到 node_modules ➜ react-native-dynamic-splash 并添加 RNDynamicSplash.xcodeproj
+3. 在XCode中的项目导航器中，选择targets 添加 libRNDynamicSplash.a 到你的项目，在 Build Phases ➜ Link Binary With Libraries中
+4. 修复 'RNDynamicSplash.h' 头文件找不大, 必须选择 project/targets →  Build Settings → Search Paths → Header Search Paths to add:
+  - project $(SRCROOT)/../node_modules/react-native-dynamic-splash/ios recursive
+  - targets $(inherited) recursive
+
+
 ## 使用
 
 ### Android
@@ -94,13 +109,43 @@ public class MainActivity extends ReactActivity {
 }
 ```
 
+### iOS
+- AppDelegate.m 文件
+```objective-c
+...
+#import "RNDynamicSplash.h"
+#import "SplashConfig.h"
+
+@implementation AppDelegate
+
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+{
+  ...
+  [self.window makeKeyAndVisible];
+
+  SplashConfig *config = [[SplashConfig alloc] init];  // splash配置类
+  // config.imageUrl = @"http://custom/splash.png";
+  config.autoHide = true;
+  // config.autoHideTime = 1000;
+  // config.dynamicShow = false;
+  // config.autoDownload = false;
+  // config.splashSavePath = @"custom";
+  [[RNDynamicSplash alloc] initWithShow:rootView splashConfig:config];  // 在此添加展示splash
+
+  return YES;
+}
+
+@end
+...
+```
+
 ### 配置项
 | type | Field | defaultValue | setter | description |
 | ---- | ----- | ------------ | ------ | ----------- |
 | String | imageUrl | "" | setImageUrl | 下载图片地址 |
 | String | splashSavePath | /splash/ | setSplashSavePath | 保存图片地址 |
-| int | themeResId | R.style.DynamicSplash_Theme | setThemeResId | 使用主题资源id |
-| int | layoutResId | R.layout.splash_dynamic | setLayoutResId | 使用布局文件资源id |
+| int | themeResId(Android only) | R.style.DynamicSplash_Theme | setThemeResId | 使用主题资源id |
+| int | layoutResId(Android only) | R.layout.splash_dynamic | setLayoutResId | 使用布局文件资源id |
 | boolean | autoDownload | true | setAutoDownload | 是否自动下载 |
 | boolean | dynamicShow | true | setDynamicShow | 是否展示下载的图片 |
 | boolean | autoHide | false | setAutoHide | 是否自动隐藏 |
@@ -109,7 +154,9 @@ public class MainActivity extends ReactActivity {
 ### 其他说明
 - 第一次启动展示默认图片，第二次再次启动展示下载好的图片
 - 可以用自己写的资源文件和主题，可以和默认的配置同名，否则调用set方法更改配置，参考包中的资源文件
-- 未设置imageUrl将展示布局文件中的资源图片
+- android未设置imageUrl将展示布局文件中的资源图片
+- ios未设置imageUrl将展示LaunchImage的图片
+
 
 #### 提供gei请求方法
 可以调用请求以取获取图片地址
@@ -154,6 +201,7 @@ public static void getSplashImageUrl(String getApi) {
 ## TODO
 - [x] android版本splash
 - [x] ios版本splash
+- [ ] js中传入url作为图片下载链接
 - [ ] 配置添加跳过按钮
 - [ ] ios使用swift重写
 
