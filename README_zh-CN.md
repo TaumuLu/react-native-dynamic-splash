@@ -68,7 +68,7 @@ public class MainApplication extends Application implements ReactApplication {
 ### iOS
 
 #### 通过CocoaPods安装
-1. Podfile文件中添加 `pod 'RNDeviceInfo', :path => '../node_modules/react-native-device-info'`
+1. Podfile文件中添加 `pod 'RNDynamicSplash', :path => '../node_modules/react-native-dynamic-splash'`
 3. 运行 pod install
 
 #### 手动安装

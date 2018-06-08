@@ -69,7 +69,7 @@ public class MainApplication extends Application implements ReactApplication {
 ### iOS
 
 #### Installing via CocoaPods
-1. Added in Podfile file `pod 'RNDeviceInfo', :path => '../node_modules/react-native-device-info'`
+1. Added in Podfile file `pod 'RNDynamicSplash', :path => '../node_modules/react-native-dynamic-splash'`
 3. Then run pod install
 
 #### Manual installation
