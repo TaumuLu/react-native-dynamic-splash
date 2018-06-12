@@ -75,7 +75,7 @@ public class MainApplication extends Application implements ReactApplication {
 1. 在XCode中的项目导航器中，右键单击 Libraries ➜ Add Files to [your project's name]
 2. 转到 node_modules ➜ react-native-dynamic-splash 并添加 RNDynamicSplash.xcodeproj
 3. 在XCode中的项目导航器中，选择targets 添加 libRNDynamicSplash.a 到你的项目，在 Build Phases ➜ Link Binary With Libraries中
-4. 修复 'RNDynamicSplash.h' 头文件找不大, 必须选择 project/targets →  Build Settings → Search Paths → Header Search Paths to add:
+4. 修复 'RNDynamicSplash.h' 头文件找不到, 必须选择 project/targets →  Build Settings → Search Paths → Header Search Paths to add:
   - project $(SRCROOT)/../node_modules/react-native-dynamic-splash/ios recursive
   - targets $(inherited) recursive
 
@@ -153,12 +153,12 @@ public class MainActivity extends ReactActivity {
 
 ### 其他说明
 - 第一次启动展示默认图片，第二次再次启动展示下载好的图片
-- 可以用自己写的资源文件和主题，可以和默认的配置同名，否则调用set方法更改配置，参考包中的资源文件
+- android可以用自己写的资源文件和主题，可以和默认的配置同名，否则调用set方法更改配置，参考包中的资源文件
 - android未设置imageUrl将展示布局文件中的资源图片
 - ios未设置imageUrl将展示LaunchImage的图片
 
 
-#### 提供gei请求方法
+#### 提供get请求方法
 可以调用请求以取获取图片地址
 ```java
 // mock json data

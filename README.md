@@ -153,11 +153,11 @@ public class MainActivity extends ReactActivity {
 
 ### Other instructions
 - The first time to start displaying the default image, the second time to start displaying the downloaded image again
-- Can use their own written resource files and topics, and the same name as the default configuration, otherwise call the set method to change the configuration, reference package resource file
+- Android Can use their own written resource files and topics, and the same name as the default configuration, otherwise call the set method to change the configuration, reference package resource file
 - Android doesn't set imageUrl to show resource image in layout file
 - ios does not set imageUrl to show picture of LaunchImage
 
-#### Provide gei request method
+#### Provide get request method
 Can call the request to get the address of the picture
 ```java
 // mock json data
