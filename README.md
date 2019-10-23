@@ -6,13 +6,22 @@ React Native dynamic launch page (advertisement page), support for Android and i
 ```
 npm install react-native-dynamic-splash --save
 ```
+or
+```
+yarn add react-native-dynamic-splash
+```
 
 ## Demo
 | IOS | Android |
 | --- | ------- |
 | ![IOS](./demo.ios.gif) | ![Android](./demo.android.gif) |
 
-## Rn installation
+## installation React Native 0.60
+
+[CLI autolink feature](https://github.com/react-native-community/cli/blob/master/docs/autolinking.md) links the module while building the app. 
+
+
+## installation React Native <= 0.59
 
 ### Android
 
