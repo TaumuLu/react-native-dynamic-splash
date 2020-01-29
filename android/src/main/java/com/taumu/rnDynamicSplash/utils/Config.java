@@ -4,6 +4,7 @@ import com.taumu.rnDynamicSplash.R;
 
 public class Config {
     private String imageUrl = "";
+    private int color = 0;
     private String splashSavePath = "/splash/";
     private int themeResId = R.style.DynamicSplash_Theme;
     private int layoutResId = R.layout.splash_dynamic;
@@ -11,6 +12,14 @@ public class Config {
     private boolean dynamicShow = true;
     private boolean autoHide = false;
     private long autoHideTime = 3000;
+
+    public int getColor() {
+        return color;
+    }
+
+    public void setColor(int color) {
+        this.color = color;
+    }
 
     public String getImageUrl() {
         return imageUrl;

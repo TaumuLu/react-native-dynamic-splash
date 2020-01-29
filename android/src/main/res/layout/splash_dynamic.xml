@@ -9,7 +9,6 @@
         android:id="@+id/dynamicSplash_id"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@android:color/holo_blue_dark"
-        android:scaleType="fitXY"
-        android:src="@android:drawable/sym_def_app_icon" />
+        android:background="@android:color/white"
+        android:scaleType="fitXY" />
 </LinearLayout>

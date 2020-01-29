@@ -40,6 +40,8 @@ public class DynamicSplash {
                     mDialog.setContentView(finalConfig.getLayoutResId());
                     mDialog.setCancelable(false);
                     mSplashImage = (ImageView) mDialog.findViewById(R.id.dynamicSplash_id);
+                    mSplashImage.setBackgroundColor(mConfig.getColor());
+
                     if (finalConfig.isDynamicShow()) {
                         DynamicSplashDownLoad.setDialogImage(activity, mSplashImage);
                     }
